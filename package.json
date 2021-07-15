@@ -9,5 +9,12 @@
   "scripts": {
     "serve": "cd frontend && vue-cli-service serve",
     "deploy": "truffle compile --reset && truffle migrate --reset"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1"
   }
 }

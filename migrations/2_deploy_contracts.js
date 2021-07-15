@@ -1,5 +1,5 @@
-const Contract = artifacts.require("Contract");
+const Color = artifacts.require("Color");
 
 module.exports = function(deployer) {
-  deployer.deploy(Contract);
+  deployer.deploy(Color);
 };
