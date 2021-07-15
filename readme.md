@@ -2,6 +2,8 @@
 Predefined project with Truffle & Drizzle
 Good starting point for another projects.
 
+https://www.youtube.com/watch?v=YPbgjPPC1d0
+
 ## Dependencies
 - Ganache https://www.trufflesuite.com/ganache
 
