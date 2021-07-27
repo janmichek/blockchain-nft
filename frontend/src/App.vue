@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isDrizzleInitialized" id="app">
+  <div id="app">
     <header>
       account: {{ account }}
     </header>
@@ -11,17 +11,12 @@
       </div>
     </div>
 
-    <input type="text" placeholder="e.g #FFFFF" v-model="inputColor">
+    <input type="color" v-model="inputColor">
     <button @click="mint">MINT</button>
-
-  </div>
-  <div v-else>
-    Loading
   </div>
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
   import Web3 from "web3"
   import Color from './contracts/Color.json'
 
@@ -37,7 +32,6 @@
         inputColor: null,
       }
     },
-    computed: mapGetters('drizzle', ['isDrizzleInitialized']),
     async mounted () {
       await this.loadWeb3()
       await this.loadBlockchainData()
@@ -74,9 +68,8 @@
         }
       },
       mint () {
-
         this.contract.methods.mint(this.inputColor).send({ from: this.account })
-          .once('receipt', (receipt) => {
+          .once('receipt', () => {
             this.colors.push(this.inputColor)
             this.inputColor = null
           })
