@@ -1,5 +1,5 @@
 {
-  "name": "drizzle-template",
+  "name": "blockchain-nft",
   "version": "0.1",
   "description": "",
   "author": {
@@ -8,14 +8,13 @@
   },
   "scripts": {
     "serve": "cd frontend && vue-cli-service serve",
-    "deploy": "truffle compile --reset && truffle migrate --reset"
+    "deploy": "truffle compile && truffle migrate --reset"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.2.0",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "chai": "4.2.0",
-    "chai-as-promised": "7.1.1",
-    "simpledotcss": "^1.0.1"
+    "chai-as-promised": "7.1.1"
   }
 }
