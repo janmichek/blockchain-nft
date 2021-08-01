@@ -1,13 +1,20 @@
 <template>
   <div id="app">
     <header>
+      <h1>NFT DAPP</h1>
       account: {{ account }}
     </header>
     <div>Color Tokens</div>
-    <div class="color-list " v-for="color in colors" :key="color">
+    <div class="color-list"
+         v-for="color in colors"
+         :key="color">
       <div class="color">
-        <div class="color-sample" :style="`background: ${color}`"/>
-        <div class="color-code"> {{ color }}</div>
+        <div
+          class="color-sample"
+          :style="`background: ${color}`"/>
+        <div class="color-code">
+          {{ color }}
+        </div>
       </div>
     </div>
 
