@@ -15,6 +15,5 @@ contract Color is ERC721Enumerable {
     colors.push(_color);
     _mint(msg.sender, colors.length);
     _colorExists[_color] = true;
-
   }
 }
