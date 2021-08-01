@@ -1,7 +1,8 @@
 ### Blockchain NFT mint
 
+In this app you can create token in form of color hex code and mint it into blockchain.
 
-This repository is inspired by tutorial:
+This repository is inspired by following tutorial:
 https://www.youtube.com/watch?v=YPbgjPPC1d0
 
 ## Dependencies
@@ -17,6 +18,8 @@ https://www.youtube.com/watch?v=YPbgjPPC1d0
 
 ### Deploy contracts to blockchain
 
+Run Ganache with Quickstart Workspace
+
 ```yarn deploy```
 
 ### Install frontend dependencies
@@ -26,8 +29,6 @@ https://www.youtube.com/watch?v=YPbgjPPC1d0
 ```yarn install```
 
 ## Run project
-
-Run Ganache with Quickstart Workspace
 
 ```yarn serve```
 
