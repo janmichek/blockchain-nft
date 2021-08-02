@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="!loading"
+    v-if="!isLoading"
     id="app">
     <header>
       <h1>NFT DAPP</h1>
@@ -35,7 +35,7 @@
     </section>
   </div>
   <div v-else>
-    Loading
+    loading
   </div>
 </template>
 
@@ -48,7 +48,7 @@
     data () {
       return {
         account: '',
-        loading: true,
+        isLoading: true,
         contract: null,
         colors: [],
         colorCount: null,
@@ -84,7 +84,7 @@
               const color = await this.contract.methods.colors(i - 1).call()
               this.colors.push(color)
             }
-            this.loading = false
+            this.isLoading = false
 
           } catch (e) {
             /* eslint-disable no-console*/
@@ -97,14 +97,14 @@
       },
 
       mint () {
-        this.loading = true
+        this.isLoading = true
         this.contract.methods
           .mint(this.selectedColor)
           .send({ from: this.account })
           .once('receipt', () => {
             this.colors.push(this.selectedColor)
             this.selectedColor = null
-            this.loading = false
+            this.isLoading = false
           })
       },
     },
